@@ -3,4 +3,8 @@ const capitalize = (word) => {
 	return word.charAt(0).toUpperCase() + rest;
 };
 
-module.exports = capitalize;
+const reverseWord = (word) => {
+	return word.split("").reverse().join("");
+};
+
+export { reverseWord, capitalize };
