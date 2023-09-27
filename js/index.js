@@ -24,4 +24,46 @@ const calculator = () => {
 	return { add, subtract, divide, multiply };
 };
 
-export { calculator, reverseWord, capitalize };
+const caesarCipher = (string, shift) => {
+	const alphabet = [
+		"a",
+		"b",
+		"c",
+		"d",
+		"e",
+		"f",
+		"g",
+		"h",
+		"i",
+		"j",
+		"k",
+		"l",
+		"m",
+		"n",
+		"o",
+		"p",
+		"q",
+		"r",
+		"s",
+		"t",
+		"u",
+		"v",
+		"w",
+		"x",
+		"y",
+		"z",
+	];
+	let solved = [];
+
+	let input = Array.from(string);
+
+	input.forEach((element) => {
+		let index = alphabet.indexOf(element);
+
+		solved.push(alphabet[index + shift]);
+	});
+
+	return solved.join("");
+};
+
+export { caesarCipher, calculator, reverseWord, capitalize };
