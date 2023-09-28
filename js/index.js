@@ -60,9 +60,14 @@ const caesarCipher = (string, shift) => {
 	input.forEach((element) => {
 		let index = alphabet.indexOf(element);
 
-		solved.push(alphabet[index + shift]);
+		let newIndex = (index + shift) % 26;
+		solved.push(alphabet[newIndex]);
+		// if (index + shift > 25) {
+		// 	solved.push(alphabet[index + shift - 25]);
+		// } else {
+		// 	solved.push(alphabet[index + shift]);
+		// }
 	});
-
 	return solved.join("");
 };
 

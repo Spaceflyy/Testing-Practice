@@ -23,11 +23,7 @@ test("Calculator functions work properly", () => {
 });
 
 test("Caesar Cipher", () => {
-	expect(caesarCipher("abcdefghijklmnopqrstuvwxyz", 1)).toBe(
-		"bcdefghijklmnopqrstuvwxyza"
-	);
-
-	expect(caesarCipher("abcdefghijklmnopqrstuvwxyz", 3)).toBe(
-		"defghijklmnopqrstuvwxyzabc"
+	expect(caesarCipher("abcdefghijklmnopqrstuvwxyz", 10)).toBe(
+		"klmnopqrstuvwxyzabcdefghij"
 	);
 });
