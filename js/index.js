@@ -71,4 +71,17 @@ const caesarCipher = (string, shift) => {
 	return solved.join("");
 };
 
-export { caesarCipher, calculator, reverseWord, capitalize };
+const analyzeArray = (array) => {
+	let total = array.reduce((acc, curr) => {
+		return acc + curr;
+	}, 0);
+
+	let min = Math.min.apply(Math, array);
+	let max = Math.max.apply(Math, array);
+	let length = array.length;
+	let average = total / length;
+
+	return { average, min, max, length };
+};
+
+export { analyzeArray, caesarCipher, calculator, reverseWord, capitalize };
